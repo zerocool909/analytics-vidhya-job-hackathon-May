@@ -18,7 +18,7 @@ Now, the bank is looking for your help in identifying customers that could show 
 •	Details of his/her relationship with the bank (Channel_Code,Vintage, 'Avg_Asset_Value etc.)
 Solution:
 The current solution is based on assumptions on EDA(graphs and other details included in Jupyter notebook .ipynb file) and ascertaining the data type as well as feature engineering.
-1.Data collection : All data used for training is provided by the competition admins, no external data is used for training the model.
+1. Data collection : All data used for training is provided by the competition admins, no external data is used for training the model.
 2. Data Pre-processing  : A total of 10 features are provided. 
 EDA study was carried out based on pandas_profiling on training set. Attached is av_credit_card_lead_eda.html for reference.
 
@@ -39,14 +39,21 @@ Numerical Columns
 
 
 Creating a basic heat map of the training set we find that though other features are nearly correlated with ‘Is_Lead’ but their removal depends on how they fit while modelling the data. 
+ 
  ![image](https://user-images.githubusercontent.com/17177668/120118594-fc865900-c1b0-11eb-8803-283cfe2aab4a.png)
 
 When observing all the the categorical columns, some data was found to be NaN for Credit_Product
+ 
+ ![image](https://user-images.githubusercontent.com/17177668/120118696-7ae2fb00-c1b1-11eb-9159-92e5cb3bbdd5.png)
+
  
 We fill Credit_Product with ‘Unknown’ as there are missing values in test set too on which we need to predict.
 
 Now when looking at numerical columns we observe that data corresponding to Vintage, Age and Avg_Account_Balance is skewed.
 Also, Avg_Account_Balance has few outliers,
+
+![image](https://user-images.githubusercontent.com/17177668/120118705-859d9000-c1b1-11eb-8f50-5958d5847bb2.png)
+
  
 •	I tried both approaches of removing(values >0.999 and values<.001 quantile)as well as keeping these outliers. Though keeping them provided better AUC score.
 
@@ -82,6 +89,12 @@ Overall accuracy of Light GBM model: 0.8609449395678184
 •	I have also tried with few top features as feature_fraction=0.7 in model params
  
 AUC score: 0.8695915099762787
+
+![image](https://user-images.githubusercontent.com/17177668/120118729-9b12ba00-c1b1-11eb-91f8-0eca17535a53.png)
+
+![image](https://user-images.githubusercontent.com/17177668/120118731-a0700480-c1b1-11eb-87a6-be12033aa3a6.png)
+
+![image](https://user-images.githubusercontent.com/17177668/120118741-a9f96c80-c1b1-11eb-91a0-a0d05d52b710.png)
 
  
 
