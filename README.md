@@ -101,5 +101,3 @@ AUC score: 0.8695915099762787
 4.Solution submission: The best performing model is used to predict_proba for probability values of both classes for ‘Is_Lead’. The vales corresponding to 1 is used for prediction.
 
 
-
-![image](https://user-images.githubusercontent.com/17177668/120118565-d82a7c80-c1b0-11eb-92c9-6b2332c2a4ed.png)
