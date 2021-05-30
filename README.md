@@ -1,11 +1,11 @@
-# analytics-vidhya-job-hackathon-May
+# Analytics Vidhya hackathon May
 
 https://datahack.analyticsvidhya.com/contest/job-a-thon-2/?utm_source=datahack&utm_medium=Navbar&utm_campaign=Jobathon
 
 ## Approach and code set for the competition
-JOB-A-THON - May 2021
+## JOB-A-THON - May 2021
 
-Credit Card Lead Prediction
+# Credit Card Lead Prediction
 Analysis and Solution by Aditya Raj
 
 Problem Statement:
